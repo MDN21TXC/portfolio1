@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Elias Endeg · Electromechanical Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="blob-bg">
+      <div class="grid-overlay"></div>
+      <div class="noise-overlay"></div>
+      <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+        <div class="blob cursor-blob"></div>
+      </div>
+    </div>
+
+    <!-- SVG Filter for Liquid Distortion -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <defs>
+        <filter id="liquid-distortion">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="18" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 25 -10" result="goo" />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-mark">EE</span>
+          <a href="#" class="brand-name">Elias Endeg</a>
+        </div>
+        <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#services">Services</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        <div class="actions">
+          <button id="theme-toggle" aria-label="Toggle theme">🌗</button>
+          <a class="btn btn-secondary" href="./eliasdessalegnCV.pdf" download>Download CV</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-image" data-aos="fade-right">
+            <div class="profile-glow"></div>
+            <img src="./file/photo.png" alt="Elias Endeg" class="profile-pic">
+          </div>
+          <div class="hero-text" data-aos="fade-left">
+            <h1>Elias Endeg</h1>
+            <p class="subtitle">Electromechanical Engineer & Automation Specialist</p>
+            <p>B.Sc. in Electromechanical Engineering. Expert in software programming, graphic design, and AI automation for industrial and healthcare solutions.</p>
+            <div class="cta">
+              <a class="btn btn-primary" href="#contact">Hire Me <i data-lucide="send" class="btn-icon"></i></a>
+              <a class="btn btn-outline" href="./eliasdessalegnCV.pdf" download>Download CV <i data-lucide="download" class="btn-icon"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <i data-lucide="user" class="section-icon"></i>
+            <h2>Summary</h2>
+          </div>
+          <p class="summary-text">Motivated electromechanical engineering graduate with expertise in software programming, graphic design, AI automation, and project management. Focused on contributing to industrial, manufacturing, and healthcare automation solutions through innovative engineering and strategic thinking.</p>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <i data-lucide="cpu" class="section-icon"></i>
+            <h2>Skills</h2>
+          </div>
+          <div class="skills-grid">
+            <div class="card skill-card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="card-icon"><i data-lucide="settings"></i></div>
+              <h3>Engineering & Automation</h3>
+              <ul>
+                <li>PLC Programming, Robotics</li>
+                <li>Arduino, Mechatronics</li>
+                <li>Manufacturing Processes</li>
+              </ul>
+            </div>
+            <div class="card skill-card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="card-icon"><i data-lucide="code"></i></div>
+              <h3>Software & Design</h3>
+              <ul>
+                <li>Python, AI Automation</li>
+                <li>Photoshop, Illustrator</li>
+                <li>Graphic Design, Visual Basic</li>
+              </ul>
+            </div>
+            <div class="card skill-card" data-aos="zoom-in" data-aos-delay="300">
+              <div class="card-icon"><i data-lucide="users"></i></div>
+              <h3>Soft Skills</h3>
+              <ul>
+                <li>Problem-Solving</li>
+                <li>Team Collaboration</li>
+                <li>Project & Time Management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <i data-lucide="layers" class="section-icon"></i>
+            <h2>Services</h2>
+          </div>
+          <div class="cards">
+            <article class="card service-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="card-icon"><i data-lucide="zap"></i></div>
+              <h3>Automation Solutions</h3>
+              <p>Specialized in industrial, manufacturing, and healthcare automation. From PLC programming to AI-driven workflow optimizations.</p>
+            </article>
+            <article class="card service-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="card-icon"><i data-lucide="pen-tool"></i></div>
+              <h3>Graphic Design</h3>
+              <p>Creative branding, logo design, and marketing materials. Delivering visually stunning solutions tailored to your brand identity.</p>
+            </article>
+            <article class="card service-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="card-icon"><i data-lucide="code-2"></i></div>
+              <h3>Software Development</h3>
+              <p>Custom software programming using Python and Visual Basic. Building educational platforms and administrative tools.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <i data-lucide="briefcase" class="section-icon"></i>
+            <h2>Professional Experience</h2>
+          </div>
+          <div class="timeline">
+            <article class="exp-card timeline-item" data-aos="fade-left">
+              <div class="exp-head">
+                <div class="exp-icon"><i data-lucide="utensils"></i></div>
+                <div>
+                  <h3>Entrepreneur (Restaurant Business Owner)</h3>
+                  <p class="muted">Friends Bar & Restaurant · Addis Ababa · Mar 2025 – Present</p>
+                </div>
+              </div>
+              <ul class="exp-bullets">
+                <li>Oversee daily operations, managing team, inventory, and customer service for a high-quality experience.</li>
+                <li>Lead business development through menu innovation and local supplier partnerships.</li>
+                <li>Implement strategic financial management, analyzing costs and optimizing budgets for maximum profitability.</li>
+              </ul>
+            </article>
+            <article class="exp-card timeline-item" data-aos="fade-left" data-aos-delay="100">
+              <div class="exp-head">
+                <div class="exp-icon"><i data-lucide="palette"></i></div>
+                <div>
+                  <h3>Freelance Graphic Designer</h3>
+                  <p class="muted">Self-Employed · 2019 – Present</p>
+                </div>
+              </div>
+              <ul class="exp-bullets">
+                <li>Design diverse marketing materials (logos, posters, digital graphics) tailored to client branding needs.</li>
+                <li>Collaborate closely with clients to deliver visually stunning solutions that enhance marketing campaigns.</li>
+                <li>Manage multiple high-pressure projects with tight deadlines while maintaining exceptional quality.</li>
+              </ul>
+            </article>
+            <article class="exp-card timeline-item" data-aos="fade-left" data-aos-delay="200">
+              <div class="exp-head">
+                <div class="exp-icon"><i data-lucide="layout"></i></div>
+                <div>
+                  <h3>Graphics Designer</h3>
+                  <p class="muted">Abu Advertisement · Bahir Dar · Jan 2018 – Jun 2019</p>
+                </div>
+              </div>
+              <ul class="exp-bullets">
+                <li>Developed creative graphic designs for advertising campaigns using advanced Photoshop and Illustrator features.</li>
+                <li>Successfully managed deadlines, delivering polished designs while upholding stringent quality standards.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <i data-lucide="terminal" class="section-icon"></i>
+            <h2>Key Projects</h2>
+          </div>
+          <div class="cards">
+            <article class="card project-card" data-aos="flip-up" data-aos-delay="100">
+              <div class="project-header">
+                <i data-lucide="factory"></i>
+                <h3>Industrial Automation</h3>
+              </div>
+              <p>Research on robotics and PLC programming to transform production processes. Prototyped systems using Arduino to enhance output and reduce waste.</p>
+            </article>
+            <article class="card project-card" data-aos="flip-up" data-aos-delay="200">
+              <div class="project-header">
+                <i data-lucide="activity"></i>
+                <h3>Healthcare Automation</h3>
+              </div>
+              <p>Explored AI-driven tools for appointment scheduling and patient assessments, focusing on data privacy and healthcare regulation compliance.</p>
+            </article>
+            <article class="card project-card" data-aos="flip-up" data-aos-delay="300">
+              <div class="project-header">
+                <i data-lucide="book-open"></i>
+                <h3>Kids Learning Assistance</h3>
+              </div>
+              <p>Created an educational software platform using Visual Basic with interactive modules and a digital library. Earned recognition at a university-level event.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="languages" class="section">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <i data-lucide="languages" class="section-icon"></i>
+            <h2>Languages</h2>
+          </div>
+          <div class="languages-grid">
+            <div class="lang-item">
+              <div class="lang-info">
+                <span>Amharic (Native)</span>
+                <span>100%</span>
+              </div>
+              <div class="progress-bar"><div class="progress" style="width: 100%"></div></div>
+            </div>
+            <div class="lang-item">
+              <div class="lang-info">
+                <span>English (Fluent)</span>
+                <span>90%</span>
+              </div>
+              <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <i data-lucide="graduation-cap" class="section-icon"></i>
+            <h2>Education & Academic Journey</h2>
+          </div>
+          <div class="education-timeline">
+            <article class="edu-card card" data-aos="fade-up" data-aos-delay="100">
+              <div class="edu-header">
+                <i data-lucide="school"></i>
+                <div class="edu-title-group">
+                  <h3>B.Sc. in Electromechanical Engineering</h3>
+                  <p class="institution">Addis Ababa Science and Technology University (AASTU)</p>
+                </div>
+              </div>
+              <p class="muted">September 2020 – July 2025 (Expected)</p>
+              <div class="edu-content">
+                <p>Developing a strong technical foundation through rigorous coursework and hands-on laboratory experience.</p>
+                <ul class="edu-details">
+                  <li><i data-lucide="award" class="detail-icon"></i> <strong>GPA: 3.5/4.0</strong> - Consistent academic excellence.</li>
+                  <li><i data-lucide="check-circle" class="detail-icon"></i> <strong>Core Subjects:</strong> Robotics, Manufacturing, Mechatronics, Arduino Programming.</li>
+                  <li><i data-lucide="microscope" class="detail-icon"></i> <strong>Hands-on Experience:</strong> Applying theoretical concepts to real-world engineering challenges in laboratory environments.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="edu-card card" data-aos="fade-up" data-aos-delay="200">
+              <div class="edu-header">
+                <i data-lucide="trophy"></i>
+                <div class="edu-title-group">
+                  <h3>Innovation Award</h3>
+                  <p class="institution">Bahir Dar University</p>
+                </div>
+              </div>
+              <p class="muted">July 2014</p>
+              <div class="edu-content">
+                <p>Awarded for pioneering contributions to technology and educational tools through the "Kids Learning Assistance (KLA) & Digital Library" project.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="tech-stack" class="section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <i data-lucide="tool" class="section-icon"></i>
+            <h2>Tech Stack & Tools</h2>
+          </div>
+          <div class="tech-grid">
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="100">
+              <div class="tech-main">
+                <i data-lucide="terminal"></i>
+                <span>Python</span>
+                <i data-lucide="chevron-down" class="dropdown-arrow"></i>
+              </div>
+              <div class="tech-details">
+                <p>Advanced scripting for automation, data processing, and AI integration. Experienced in building custom tools for engineering workflows.</p>
+              </div>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="200">
+              <div class="tech-main">
+                <i data-lucide="cpu"></i>
+                <span>Arduino</span>
+                <i data-lucide="chevron-down" class="dropdown-arrow"></i>
+              </div>
+              <div class="tech-details">
+                <p>Prototyping embedded systems, sensor integration, and real-time control for mechatronic projects.</p>
+              </div>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="300">
+              <div class="tech-main">
+                <i data-lucide="settings"></i>
+                <span>PLC</span>
+                <i data-lucide="chevron-down" class="dropdown-arrow"></i>
+              </div>
+              <div class="tech-details">
+                <p>Programmable Logic Controllers for industrial automation, ladder logic, and manufacturing process control.</p>
+              </div>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="400">
+              <div class="tech-main">
+                <i data-lucide="figma"></i>
+                <span>UI/UX</span>
+                <i data-lucide="chevron-down" class="dropdown-arrow"></i>
+              </div>
+              <div class="tech-details">
+                <p>Designing intuitive interfaces and user experiences with a focus on modern aesthetic and accessibility.</p>
+              </div>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="500">
+              <div class="tech-main">
+                <i data-lucide="palette"></i>
+                <span>Adobe PS/AI</span>
+                <i data-lucide="chevron-down" class="dropdown-arrow"></i>
+              </div>
+              <div class="tech-details">
+                <p>Expertise in Photoshop and Illustrator for branding, high-fidelity graphics, and marketing assets.</p>
+              </div>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="600">
+              <div class="tech-main">
+                <i data-lucide="database"></i>
+                <span>SQL</span>
+                <i data-lucide="chevron-down" class="dropdown-arrow"></i>
+              </div>
+              <div class="tech-details">
+                <p>Database management, query optimization, and structured data handling for healthcare and industrial systems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="interests" class="section">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <i data-lucide="smile" class="section-icon"></i>
+            <h2>Extra & Interests</h2>
+          </div>
+          <div class="interests-container">
+            <div class="interest-dropdown">
+              <button class="interest-trigger">
+                <span>Photography</span>
+                <i data-lucide="chevron-down"></i>
+              </button>
+              <div class="interest-content">
+                <p>Capturing perspectives through a lens, focusing on industrial design and natural landscapes. Exploring how visual storytelling connects with technology.</p>
+              </div>
+            </div>
+            <div class="interest-dropdown">
+              <button class="interest-trigger">
+                <span>Tech Research</span>
+                <i data-lucide="chevron-down"></i>
+              </button>
+              <div class="interest-content">
+                <p>Deep-diving into emerging AI trends, robotics advancements, and the future of electromechanical engineering.</p>
+              </div>
+            </div>
+            <div class="interest-dropdown">
+              <button class="interest-trigger">
+                <span>Entrepreneurship</span>
+                <i data-lucide="chevron-down"></i>
+              </button>
+              <div class="interest-content">
+                <p>Managing and scaling business operations, currently leading Friends Bar & Restaurant with a focus on operational excellence.</p>
+              </div>
+            </div>
+            <div class="interest-dropdown">
+              <button class="interest-trigger">
+                <span>Community Building</span>
+                <i data-lucide="chevron-down"></i>
+              </button>
+              <div class="interest-content">
+                <p>Engaging with local tech communities and fostering environments for collaborative learning and innovation.</p>
+              </div>
+            </div>
+            <div class="interest-dropdown">
+              <button class="interest-trigger">
+                <span>AI Ethics</span>
+                <i data-lucide="chevron-down"></i>
+              </button>
+              <div class="interest-content">
+                <p>Studying the ethical implications of automation and AI in healthcare and industrial sectors to ensure human-centric solutions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <i data-lucide="mail" class="section-icon"></i>
+            <h2>Get in Touch</h2>
+          </div>
+          
+          <div class="contact-wrapper" data-aos="fade-up">
+            <div class="contact-info-panel">
+              <div class="contact-text">
+                <h3>Let's collaborate on your next project</h3>
+                <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+              </div>
+              
+              <div class="contact-methods">
+                <div class="contact-item">
+                  <div class="method-icon"><i data-lucide="at-sign"></i></div>
+                  <div class="method-details">
+                    <span>Email me at</span>
+                    <a href="mailto:eliasmednendeg@gmail.com">eliasmednendeg@gmail.com</a>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <div class="method-icon"><i data-lucide="phone"></i></div>
+                  <div class="method-details">
+                    <span>Call me at</span>
+                    <a href="tel:+251989827177">+251 989 827 177</a>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <div class="method-icon"><i data-lucide="map-pin"></i></div>
+                  <div class="method-details">
+                    <span>Location</span>
+                    <p>Addis Ababa, Ethiopia</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="social-links-minimal">
+                <a href="#" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                <a href="#" class="social-link" aria-label="GitHub"><i data-lucide="github"></i></a>
+                <a href="#" class="social-link" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+              </div>
+            </div>
+
+            <form class="contact-form-panel" id="contact-form" action="https://formspree.io/f/eliasmednendeg@gmail.com" method="POST">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="_replyto" placeholder="john@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="How can I help you?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                Send Message <i data-lucide="send" class="btn-icon"></i>
+              </button>
+              <div id="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <small>© <span id="year"></span> Elias Endeg · Open to Remote</small>
+      </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Back to top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
